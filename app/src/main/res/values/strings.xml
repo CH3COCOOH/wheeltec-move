@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wheeltec 遥控器</string>
+    <string name="ip_hint">Wheeltec 无人车 IP 地址 (如 192.168.0.100)</string>
+    <string name="ros1_label">ROS 1 (roslaunch)</string>
+    <string name="ros2_label">ROS 2 (ros2 launch)</string>
+    <string name="btn_connect">连接并启动控制节点</string>
+    <string name="btn_disconnect">断开连接</string>
+    <string name="status_disconnected">状态：未连接</string>
+</resources>

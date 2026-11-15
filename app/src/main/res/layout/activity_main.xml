@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- IP 地址配置 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wheeltec 无人车 IP 地址 (如 192.168.0.100)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:text="192.168.0.100" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ROS 版本选择 -->
+    <RadioGroup
+        android:id="@+id/rg_ros_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_ros1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="ROS 1" />
+
+        <RadioButton
+            android:id="@+id/rb_ros2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ROS 2" />
+    </RadioGroup>
+
+    <!-- 连接与断开按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="连接" />
+
+        <Button
+            android:id="@+id/btn_disconnect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#D32F2F"
+            android:enabled="false"
+            android:text="断开连接" />
+    </LinearLayout>
+
+    <!-- 实时状态与终端回显 -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#EEEEEE"
+        android:padding="8dp"
+        android:text="状态：未连接"
+        android:textColor="#333333"
+        android:textSize="13sp" />
+
+    <!-- 九宫格方向控制区 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <!-- 第一行: u i o -->
+        <Button android:id="@+id/btn_u"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="↖" android:textSize="20sp" />
+
+        <Button android:id="@+id/btn_i"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="↑" android:textSize="20sp" />
+
+        <Button android:id="@+id/btn_o"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="↗" android:textSize="20sp" />
+
+        <!-- 第二行: j k l -->
+        <Button android:id="@+id/btn_j"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="←" android:textSize="20sp" />
+
+        <Button android:id="@+id/btn_k" style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:backgroundTint="#FF9800" android:text="停止"
+            android:textSize="20sp" />
+
+        <Button android:id="@+id/btn_l"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="→" android:textSize="20sp" />
+
+        <!-- 第三行: n m , -->
+        <Button android:id="@+id/btn_m"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="↙" android:textSize="20sp" />
+
+        <Button android:id="@+id/btn_comma"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="↓" android:textSize="20sp" />
+
+        <Button android:id="@+id/btn_dot"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp" android:text="↘" android:textSize="20sp" />
+
+    </GridLayout>
+</LinearLayout>
