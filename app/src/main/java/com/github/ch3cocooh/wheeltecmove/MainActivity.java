@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton rbRos1, rbRos2;
     private Button btnConnect, btnDisconnect;
     private TextView tvStatus;
+    private Button btnSpeedup, btnSpeeddown;
 
     private SshControlService sshService;
 
@@ -71,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         btnConnect = findViewById(R.id.btn_connect);
         btnDisconnect = findViewById(R.id.btn_disconnect);
         tvStatus = findViewById(R.id.tv_status);
+        btnSpeedup = findViewById(R.id.btn_speedup);
+        btnSpeeddown = findViewById(R.id.btn_speeddown);
 
         btnConnect.setOnClickListener(v -> {
             String ip = etIp.getText().toString().trim();
@@ -98,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
         bindKeyButton(R.id.btn_m, 'm');
         bindKeyButton(R.id.btn_comma, ',');
         bindKeyButton(R.id.btn_dot, '.');
+        bindKeyButton(R.id.btn_speedup, 'q');
+        bindKeyButton(R.id.btn_speeddown, 'z');
     }
 
     /**
@@ -168,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
         etIp.setEnabled(!connected);
         rbRos1.setEnabled(!connected);
         rbRos2.setEnabled(!connected);
+        btnSpeedup.setEnabled(connected);
+        btnSpeeddown.setEnabled(connected);
     }
 
     @Override

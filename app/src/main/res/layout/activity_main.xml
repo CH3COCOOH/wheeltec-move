@@ -82,69 +82,81 @@
 
     <!-- 九宫格方向控制区 -->
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_weight="1"
         android:columnCount="3"
         android:rowCount="3">
 
         <!-- 第一行: u i o -->
         <Button android:id="@+id/btn_u"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="↖" android:textSize="20sp" />
 
         <Button android:id="@+id/btn_i"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="↑" android:textSize="20sp" />
 
         <Button android:id="@+id/btn_o"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="↗" android:textSize="20sp" />
 
         <!-- 第二行: j k l -->
         <Button android:id="@+id/btn_j"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="←" android:textSize="20sp" />
 
         <Button android:id="@+id/btn_k" style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:backgroundTint="#FF9800" android:text="停止"
             android:textSize="20sp" />
 
         <Button android:id="@+id/btn_l"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="→" android:textSize="20sp" />
 
         <!-- 第三行: n m , -->
         <Button android:id="@+id/btn_m"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="↙" android:textSize="20sp" />
 
         <Button android:id="@+id/btn_comma"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="↓" android:textSize="20sp" />
 
         <Button android:id="@+id/btn_dot"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="96dp" android:layout_height="96dp"
             android:layout_margin="4dp" android:text="↘" android:textSize="20sp" />
 
     </GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_speedup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="加速" />
+        <Button
+            android:id="@+id/btn_speeddown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="减速" />
+    </LinearLayout>
 </LinearLayout>
