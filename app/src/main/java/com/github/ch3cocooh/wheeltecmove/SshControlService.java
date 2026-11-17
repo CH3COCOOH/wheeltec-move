@@ -96,7 +96,7 @@ public class SshControlService extends Service {
 
                 // 加载环境变量并启动对应版本的 launch 文件
                 String launchCmd = isRos2
-                        ? "ros2 launch wheeltec_robot_rc keyboard_teleop.launch\n"
+                        ? "ros2 run wheeltec_robot_keyboard wheeltec_keyboard\n"
                         : "roslaunch wheeltec_robot_rc keyboard_teleop.launch\n";
 
                 sendRawBytes(launchCmd.getBytes(StandardCharsets.UTF_8));
